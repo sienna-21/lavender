@@ -1,0 +1,21 @@
+export const poemStanzas: string[] = [
+  "If heaven ever had a face,\nI swear it would look like yours,\npainted softly by the hands of God\nwith all the beauty He had saved for the stars.\nNo flower could ever rival you,\nno sunset could ever hold your light,\nand no masterpiece ever made\ncould come close to what I see when I look at you.",
+  "Your eyes are something else entirely—\ntwo galaxies hidden beneath your lashes,\ndeep enough to lose myself in,\nbeautiful enough to make me forget\nthat there is a whole universe beyond them.\nI see constellations in your gaze,\nlittle stars scattered through an endless night,\nand if I could spend forever exploring them,\nI would still feel like I had barely begun.",
+  "Your eyes don't simply look at me;\nthey pull me into another world.\nA world where the stars burn brighter,\nwhere the moon feels jealous of your glow,\nwhere every galaxy in existence\nseems like nothing more than a shadow\nbeside the universe living inside you.",
+  "And your smile—\nGod, your smile.\nIf creation itself could choose one thing\nto call its greatest masterpiece,\nI think it would choose you smiling.\nIt feels like sunrise after the longest night,\nlike heaven opening its doors for a moment\njust to let me see what perfection looks like.\nThere is something in your smile\nthat makes every bad day feel worth surviving.",
+  "I could spend hours admiring your face,\nmemorizing every little detail,\nevery curve, every expression,\nevery tiny change in your eyes\nwhen you're happy, shy, excited, or laughing.\nAnd somehow, every time I look at you,\nI find something new to fall in love with.",
+  "You are the most precious thing\nmy heart has ever known.\nMore precious than gold,\nmore beautiful than every rose,\nmore breathtaking than every sky\nI've ever watched turn pink at sunset.",
+  "And I need you to know this—\nthere is no one else.",
+  "Not someone prettier.\nNot someone more beautiful.\nNot someone who could make my heart feel\neven a fraction of what you do.",
+  "I could search every corner of this world,\nwatch every sunset,\ncount every star,\nwalk through every garden\nand still never find another you.",
+  "Because there is only one you.\nOne pair of those impossible eyes.\nOne smile that can undo me completely.\nOne face I could look at endlessly\nand never grow tired of.",
+  "So if you ever doubt how beautiful you are,\ncome back to these words\nand remember that there is someone here\nwho looks at you and sees heaven.",
+  "Someone who chooses you.\nOnly you.",
+  "My heart has no second choice,\nno secret place reserved for anyone else.\nIt belongs to you so completely\nthat I couldn't imagine giving it away\neven if I tried.",
+  "I love you beyond what words can carry,\nand I would give everything I have\njust to keep you smiling.",
+  "If loving you meant crossing every distance,\nI'd cross it.\nIf it meant standing beside you\nthrough every storm,\nI'd stay.",
+  "And if the whole world disappeared tomorrow,\nI'd still want my final moment\nto be spent looking into those galaxies in your eyes,\nholding you close,\nand knowing that for as long as I was given,\nI got to love the most beautiful girl\nGod ever placed in my world.",
+  "You are my favorite sight,\nmy favorite thought,\nmy favorite person,\nmy most precious love.",
+  "And no matter how many stars fill the sky,\nno matter how many galaxies exist beyond them,\nI'll always look at you and think—",
+  "how could anything in the universe\npossibly be more beautiful than her? ♡"
+];

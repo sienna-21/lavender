@@ -1,0 +1,158 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+  --color-card: var(--paper);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--paper);
+  --color-popover-foreground: var(--foreground);
+  --color-destructive: var(--blush);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-script: 'Parisienne', cursive;
+  --radius-md: 6px;
+}
+:root {
+  --background: oklch(0.946 0.035 300);
+  --foreground: oklch(0.37 0.07 303);
+  --primary: oklch(0.56 0.105 301);
+  --primary-foreground: oklch(0.99 0.005 310);
+  --secondary: oklch(0.90 0.05 300);
+  --muted: oklch(0.92 0.035 301);
+  --muted-foreground: oklch(0.53 0.065 303);
+  --accent: oklch(0.87 0.068 301);
+  --border: oklch(0.79 0.07 303 / 0.46);
+  --paper: oklch(0.981 0.011 320);
+  --blush: oklch(0.85 0.065 351);
+  --bunny-lilac: oklch(0.81 0.071 301);
+  --bunny-pink: oklch(0.92 0.032 350);
+  --bunny-outline: oklch(0.58 0.063 308);
+  --stem: oklch(0.66 0.047 151);
+  --flower-center: oklch(0.87 0.066 81);
+  --cloud: oklch(0.99 0.01 306 / 0.8);
+  --shadow-letter: 0 8px 36px oklch(0.50 0.075 300 / 0.09);
+  --shadow-button: 0 4px 12px oklch(0.50 0.075 300 / 0.13);
+  --wash: linear-gradient(150deg, oklch(0.956 0.028 303), oklch(0.92 0.048 301) 60%, oklch(0.949 0.028 325));
+}
+* { box-sizing: border-box; border-color: var(--border); letter-spacing: 0; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+a { text-decoration: none; }
+.wednesday-page, .poem-page { position: relative; overflow: hidden; background: var(--wash); }
+.wednesday-page::after, .poem-page::after, .love-letter::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .11; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='gray' filter='url(%23n)' opacity='.4' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+.wednesday-page { min-height: max(850px, 100svh); display: grid; place-items: center; padding: 64px 28px 45px; }
+.page-frame { position: absolute; inset: 25px; border: 1px solid var(--border); border-radius: 48% 48% 4px 4px / 13% 13% 4px 4px; pointer-events: none; }
+.wednesday-content { position: relative; z-index: 1; display: flex; align-items: center; flex-direction: column; text-align: center; }
+.gift-label { display: flex; justify-content: center; align-items: center; gap: 13px; font: 10px var(--font-sans); text-transform: uppercase; color: var(--muted-foreground); }
+.gift-label span { width: 28px; height: 1px; background: var(--border); }
+.center-bow { width: 86px; height: 66px; margin: 20px 0 12px; }
+.bow-art { stroke: var(--bunny-outline); stroke-width: 1.5; fill: var(--secondary); stroke-linecap: round; stroke-linejoin: round; }
+.bow-fold { fill: none; opacity: .5; }
+.corner-bow { position: absolute; width: 118px; height: 90px; }
+.bow-left { top: 70px; left: 7%; transform: rotate(-19deg); }
+.bow-right { top: 90px; right: 7%; transform: rotate(20deg); }
+.wednesday-content h1 { font: 500 55px/1.13 var(--font-serif); margin: 0; }
+h1 em { font-weight: 400; }
+.bunny-scene { width: 330px; max-width: 100%; margin: 30px auto 0; }
+.bunny-art { width: 100%; display: block; overflow: visible; }
+.bunny { stroke: var(--bunny-outline); stroke-width: 1.7; }
+.lavender-bunny { fill: var(--bunny-lilac); }
+.pink-bunny { fill: var(--bunny-pink); }
+.inner-ear { fill: var(--blush); stroke: none; opacity: .65; }
+.bunny-face { fill: var(--foreground); stroke: none; }
+.mouth { fill: none; stroke: var(--foreground); stroke-width: 1.5; stroke-linecap: round; }
+.cheek { fill: var(--blush); stroke: none; }
+.bunny-ground { fill: var(--primary); opacity: .09; }
+.tiny-hearts { fill: var(--blush); }
+.bunny-flowers { fill: var(--paper); stroke: var(--bunny-outline); stroke-width: 1; }
+.stem { stroke: var(--stem); fill: none; stroke-width: 2; }
+.flower-art { width: 90px; }
+.petals { fill: var(--secondary); stroke: var(--bunny-outline); stroke-width: 1; }
+.flower-center { fill: var(--flower-center); }
+.side-flower { position: absolute; width: 100px; opacity: .8; }
+.flower-left { left: 10%; bottom: 160px; transform: rotate(-17deg); }
+.flower-right { right: 10%; bottom: 125px; transform: rotate(18deg); }
+.wednesday-greeting { font: 34px/1.3 var(--font-script); margin: 21px 0 13px; }
+.little-divider { font: 19px var(--font-serif); color: var(--muted-foreground); margin-bottom: 25px; }
+.love-button { background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary); box-shadow: var(--shadow-button); font: 12px var(--font-sans); min-height: 47px; padding: 0 24px; gap: 16px; border-radius: 6px; transition: background .3s, transform .3s; }
+.love-button:hover { background: var(--foreground); transform: translateY(-2px); }
+.closing-note, .poem-footer p { font: 11px var(--font-sans); color: var(--muted-foreground); margin: 19px 0 0; }
+.little-star { position: absolute; font-size: 28px; color: var(--muted-foreground); opacity: .6; }
+.star-one { left: 24%; top: 35%; }
+.star-two { right: 23%; top: 51%; font-size: 19px; }
+.bottom-flourish { position: absolute; bottom: 40px; font: 21px var(--font-serif); opacity: .55; }
+.poem-page { padding: 70px 24px 60px; }
+.heaven-scene { position: absolute; inset: 0 0 auto; height: 570px; pointer-events: none; }
+.cloud-art { fill: var(--cloud); position: absolute; width: 360px; }
+.cloud-left { top: 160px; left: -110px; transform: rotate(-8deg); }
+.cloud-right { top: 80px; right: -100px; width: 420px; }
+.cloud-small { top: 350px; right: 10%; width: 160px; opacity: .65; }
+.moon { position: absolute; top: 60px; left: 22%; font-size: 45px; color: var(--primary); opacity: .5; transform: rotate(-15deg); }
+.sky-star { position: absolute; color: var(--muted-foreground); font: 26px var(--font-serif); }
+.sky-star-one { top: 240px; left: 24%; }.sky-star-two { top: 46px; right: 25%; }.sky-star-three { top: 330px; left: 12%; font-size: 13px; }
+.poem-header { text-align: center; position: relative; z-index: 1; margin: 0 auto 47px; max-width: 800px; }
+.quiet-back { position: absolute; top: -22px; left: 0; color: var(--muted-foreground); width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; }
+.quiet-back:hover { background: var(--secondary); }
+.letter-top-bow { display: block; width: 94px; height: 75px; margin: 24px auto 12px; }
+.poem-header h1 { margin: 0; font: 500 53px/1.1 var(--font-serif); }
+.poem-subtitle { font: 24px/1.5 var(--font-script); margin: 18px 0 0; }
+.love-letter { position: relative; z-index: 1; background: var(--paper); max-width: 730px; margin: 0 auto; padding: 66px 76px 44px; border-radius: 3px 3px 7px 5px; box-shadow: var(--shadow-letter); border: 1px solid color-mix(in oklch, var(--border) 40%, transparent); }
+.letter-rule { position: absolute; inset: 15px; border: 1px solid color-mix(in oklch, var(--border) 45%, transparent); pointer-events: none; }
+.letter-dedication { text-align: center; font: italic 500 24px/1.5 var(--font-serif); margin: 0 0 44px; }
+.poem-stanzas { position: relative; z-index: 1; }
+.poem-stanzas p { white-space: pre-line; font: 400 21px/1.65 var(--font-serif); margin: 0 0 31px; overflow-wrap: break-word; }
+.letter-flower-top { position: absolute; width: 64px; top: 36px; right: 9px; transform: rotate(17deg); opacity: .6; }
+.letter-flower-bottom { position: absolute; width: 70px; bottom: 70px; left: 8px; transform: rotate(-13deg); opacity: .6; }
+.letter-signoff { text-align: center; position: relative; z-index: 1; padding-top: 9px; }
+.letter-signoff .bow-art { display: block; width: 78px; margin: 0 auto 10px; }
+.letter-signoff span { font: 27px var(--font-script); }
+.poem-footer { text-align: center; position: relative; margin-top: 37px; }
+.letter-button { font: 12px var(--font-sans); color: var(--foreground); border: 1px solid var(--border); background: color-mix(in oklch, var(--paper) 35%, transparent); min-height: 46px; padding: 0 24px; gap: 13px; }
+.letter-button:hover { background: var(--paper); }
+.page-entrance { animation: arrival .9s ease both; }
+@keyframes arrival { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+::view-transition-old(root) { animation: departure .25s ease both; }
+::view-transition-new(root) { animation: arrival .5s ease both; }
+@keyframes departure { to { opacity: 0; } }
+@media (min-width: 1500px) { .wednesday-content h1 { font-size: 61px; } .bunny-scene { width: 360px; } }
+@media (max-width: 700px) {
+  .wednesday-page { min-height: max(790px, 100svh); padding: 73px 25px 70px; }
+  .page-frame { inset: 14px; border-radius: 48% 48% 4px 4px / 8% 8% 4px 4px; }
+  .wednesday-content h1 { font-size: 39px; line-height: 1.17; }
+  .center-bow { width: 74px; margin-top: 22px; margin-bottom: 18px; }
+  .corner-bow { width: 65px; height: 55px; }.bow-left { top: 28px; left: 20px; }.bow-right { top: 35px; right: 18px; }
+  .bunny-scene { width: 290px; margin-top: 33px; }
+  .wednesday-greeting { font-size: 29px; margin-top: 19px; }
+  .side-flower { width: 53px; }.flower-left { left: 0; bottom: 90px; }.flower-right { right: 0; bottom: 90px; }
+  .star-one { left: 8%; top: 43%; font-size: 20px; }.star-two { right: 6%; top: 36%; }
+  .bottom-flourish { bottom: 31px; }
+  .poem-page { padding: 60px 16px 45px; }
+  .poem-header { margin-bottom: 35px; }
+  .poem-header h1 { font-size: 39px; }
+  .poem-subtitle { font-size: 21px; max-width: 310px; margin: 18px auto 0; }
+  .quiet-back { top: -45px; left: -6px; }
+  .letter-top-bow { margin-top: 22px; width: 80px; height: 65px; }
+  .cloud-left { width: 220px; left: -100px; top: 160px; }.cloud-right { width: 245px; right: -110px; top: 65px; }.cloud-small { width: 115px; right: -20px; top: 310px; }
+  .moon { left: 14%; top: 70px; font-size: 29px; }.sky-star-one { left: 7%; top: 250px; }.sky-star-two { right: 14%; top: 38px; }.sky-star-three { display: none; }
+  .love-letter { padding: 47px 28px 35px; }
+  .letter-rule { inset: 9px; }
+  .letter-dedication { font-size: 21px; margin-bottom: 33px; padding: 0 10px; }
+  .poem-stanzas p { font-size: 18px; line-height: 1.65; margin-bottom: 28px; }
+  .letter-flower-top { width: 38px; top: 5px; right: 5px; }.letter-flower-bottom { width: 42px; left: 0; bottom: 30px; }
+}
+@media (max-width: 360px) { .wednesday-content h1 { font-size: 34px; }.wednesday-greeting { font-size: 26px; }.poem-stanzas p { font-size: 17px; }.love-letter { padding-left: 23px; padding-right: 23px; }.gift-label { font-size: 9px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
