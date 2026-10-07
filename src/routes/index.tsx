@@ -5,7 +5,7 @@ import { Bow, BunnyPair, Flower } from "@/components/love-art";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Happy Wednesday, my love ♡" },
+    { title: "wednesday ♡" },
     { name: "description", content: "Wherever we are, my heart will always find its way back to you. A little Wednesday surprise." },
     { property: "og:title", content: "Happy Wednesday, my love ♡" },
     { property: "og:description", content: "Two little bunnies and a lavender love letter, just for you." },
